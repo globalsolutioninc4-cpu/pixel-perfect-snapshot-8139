@@ -8,3 +8,8 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+## Architecture decisions
+
+- Keep the consumer security guide as one long index route with hash navigation because it is a single ordered recovery workflow.
+- Build all educational screenshots as inert React/CSS illustrations so simulated controls can never trigger calls or downloads.
