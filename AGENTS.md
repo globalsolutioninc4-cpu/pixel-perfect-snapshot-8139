@@ -13,3 +13,4 @@
 
 - Keep the consumer security guide as one long index route with hash navigation because it is a single ordered recovery workflow.
 - Build all educational screenshots as inert React/CSS illustrations so simulated controls can never trigger calls or downloads.
+- Render shared ScamGuide navigation and legal disclosures in the root site chrome so every content route carries consistent independent-resource positioning.
