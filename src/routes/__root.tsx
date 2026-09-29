@@ -8,6 +8,7 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
+import { SiteChrome } from "@/components/site-chrome";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
@@ -77,11 +78,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Windows Scam Safety Guide" },
-      { name: "description", content: "Independent guidance for safely closing fake security warnings." },
-      { name: "author", content: "Windows Scam Safety Guide" },
-      { property: "og:title", content: "Windows Scam Safety Guide" },
-      { property: "og:description", content: "Independent guidance for safely closing fake security warnings." },
+      { title: "ScamGuide — Independent Scam-Awareness Resource" },
+      { name: "description", content: "Independent educational guidance for recognizing online scams and deceptive digital warnings." },
+      { name: "author", content: "ScamGuide" },
+      { property: "og:title", content: "ScamGuide" },
+      { property: "og:description", content: "Independent scam-awareness and online-safety education." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -121,8 +122,7 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <SiteChrome><Outlet /></SiteChrome>
     </QueryClientProvider>
   );
 }
