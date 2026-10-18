@@ -1,0 +1,9 @@
+# TanStack Start generates its HTML and client entry during the build.
+# Deploy the existing app rather than treating it as a plain Vite SPA.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NITRO_PRESET = "netlify"
+  NODE_VERSION = "22"
