@@ -4,10 +4,10 @@ import { useState, type ReactNode } from "react";
 import { Button } from "@/components/ui/button";
 
 const mainLinks = [
-  { to: "/" as const, label: "Home" },
+  { to: "/" as const, hash: "", label: "Home" },
   { to: "/" as const, hash: "close", label: "Safety Guide" },
-  { to: "/about" as const, label: "About" },
-  { to: "/contact" as const, label: "Contact" },
+  { to: "/about" as const, hash: "", label: "About" },
+  { to: "/contact" as const, hash: "", label: "Contact" },
 ];
 
 export function SiteChrome({ children }: { children: ReactNode }) {
