@@ -8,8 +8,13 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
   tanstackStart: {
+    // Entries are relative to srcDirectory, not the repository root.
+    // Keep explicit filenames so exported builds use the same entries as preview.
+    srcDirectory: "src",
+    router: { entry: "router.tsx" },
+    start: { entry: "start.ts" },
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
-    server: { entry: "server" },
+    server: { entry: "server.ts" },
   },
 });
