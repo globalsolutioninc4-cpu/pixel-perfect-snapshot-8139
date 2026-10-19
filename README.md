@@ -24,3 +24,26 @@ cd <repository-name>
 npm i
 npm run dev
 ```
+
+## Netlify deployment
+
+This is a React application using **TanStack Start**, not a standalone Vite SPA.
+Keep the TanStack plugin and the existing document-hydration entry; converting
+to a `createRoot` SPA would change page rendering and routing.
+
+Export or clone the **entire project**. Required files include `package.json`,
+`vite.config.ts`, `tsconfig.json`, `netlify.toml`, `index.html`, `scripts/`,
+`public/`, and all of `src/` (especially `src/router.tsx`, `src/start.ts`,
+`src/server.ts`, `src/lib/`, `src/components/`, and `src/routes/`).
+`src/routeTree.gen.ts` is generated automatically by the TanStack plugin.
+Do not deploy only `index.html` or the page files.
+
+In Netlify, use the directory containing `package.json` as the base directory.
+The included `netlify.toml` sets Node 22, build command `npm run build`,
+publish directory `dist`, and `NITRO_PRESET=netlify`. Nitro generates the
+Netlify server function as well as the public assets; use a source build,
+not a manual upload of `dist` alone.
+
+`npm run build` first checks that required source entries exist. If this
+reports an incomplete source export, restore the named files from a fresh
+export instead of removing TanStack Start or creating a different React entry.

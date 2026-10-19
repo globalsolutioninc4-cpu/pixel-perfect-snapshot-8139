@@ -15,3 +15,4 @@
 - Build all educational screenshots as inert React/CSS illustrations so simulated controls can never trigger calls or downloads.
 - Render shared ScamGuide navigation and legal disclosures in the root site chrome so every content route carries consistent independent-resource positioning.
 - Exported Netlify deployments use npm run build with NITRO_PRESET=netlify and publish dist; root index.html references the existing virtual TanStack client entry for source-export compatibility, while TanStack Start generates the production document and hydrates document, so never replace its shell with a standalone Vite SPA entry.
+- Configure explicit router, Start, and server filenames relative to srcDirectory and retain the prebuild source-entry check so incomplete exports fail with a useful diagnostic before Vite starts.
