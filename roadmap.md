@@ -1,7 +1,5 @@
 # Roadmap
 
-- [x] Configure explicit TanStack Start entry filenames and validate required files before exported builds.
-- [ ] Verify the updated export on Netlify — requires a fresh export and a Netlify deployment; local entry and page checks are available here.
 - [x] Apply ScamGuide branding, educational positioning, safer CTAs, and simulation labels.
 - [x] Add shared navigation and footer across all pages.
 - [x] Add About, Contact, Privacy Policy, Terms of Use, and Disclaimer pages.
